@@ -1,0 +1,17 @@
+<main class="contenido">
+    <h2>Inicio de Sesion</h2>
+    <p *ngIf="message" style="color: black;">{{ message }}</p>
+
+    <form>
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario.Usuario"><br>
+  
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="usuario.contrasena"><br>
+        
+      <input type="hidden" value="1" name="type">
+      <button class="btn btn-primary" name="UsuarioL" (click)="logUsuario()">Ingresar</button>
+      <button class="nav-link" (click)="navigateUsuarioCreate()"> Crear Usuario </button>
+      
+    </form>
+  </main>

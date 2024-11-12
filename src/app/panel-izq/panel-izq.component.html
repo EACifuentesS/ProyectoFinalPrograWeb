@@ -1,0 +1,7 @@
+<aside class="panel-izquierdo">
+  <h2>Últimos mensajes</h2>
+  <p *ngIf="mensajes.length === 0">No tienes mensajes.</p>
+  <p *ngFor="let mensaje of mensajes">
+    {{ mensaje.mensajes }}
+  </p>
+</aside>

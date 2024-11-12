@@ -1,0 +1,54 @@
+.messages-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-button {
+    margin-left: 10px;
+    font-size: 1.5em;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .message-list {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .message-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .message-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .message-date {
+    font-size: 0.8em;
+    color: #666;
+    text-align: right;
+  }
+  

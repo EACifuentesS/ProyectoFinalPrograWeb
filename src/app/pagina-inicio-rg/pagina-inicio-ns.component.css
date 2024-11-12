@@ -1,0 +1,97 @@
+/* Estilos globales */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Altura completa */
+}
+
+header,
+footer {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+app-panel-izquierdo,
+app-panel-derecho {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+app-panel-izquierdo {
+  margin-right: 10px;
+}
+
+app-panel-derecho {
+  margin-left: 10px;
+}
+
+/* Centrar el contenido del panel principal (login) */
+app-contenido-registro {
+  flex: 2;
+  display: flex;
+  justify-content: center;  /* Centrado horizontal */
+  align-items: center;      /* Centrado vertical */
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+}
+
+/* Estilos para el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  margin-bottom: 10px;
+}
+
+form button {
+  padding: 5px 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  app-panel-izquierdo,
+  app-panel-derecho {
+    margin: 10px 0;
+  }
+
+  app-panel-izquierdo,
+  app-panel-derecho,
+  app-contenido {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+<main class="contenido">
+  <h2>Registro</h2>
+
+  <p *ngIf="message" style="color: black;">{{ message }}</p>
+  
+  <form>
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario.Usuario"><br>
+
+    <label for="nombre">Nombre Completo:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombre_completo"><br>
+
+    <label for="password">Contraseña:</label>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      [(ngModel)]="usuario.contrasena" 
+      (ngModelChange)="validatePassword()"
+    ><br>
+
+    <p *ngIf="!isPasswordValidFlag" style="color: black">
+      La contraseña debe tener al menos 8 caracteres, incluir una mayúscula y una minúscula.
+    </p>
+
+    <button *ngIf="isPasswordValidFlag" class="btn btn-primary" name="saveUser" (click)="saveNewUser()">Registrar</button>
+    <button class="nav-link" (click)="navigateUsuarioLogin()"> Logear </button>
+  </form>
+</main>

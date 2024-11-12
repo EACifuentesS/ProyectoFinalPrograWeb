@@ -1,0 +1,30 @@
+<div class="panel">
+    <!-- Cajón 1: Personas que el usuario sigue -->
+    <div class="panel-cajon" *ngIf="seguidores.length > 0">
+      <h3>Personas que sigues</h3>
+      <ul>
+        <li *ngFor="let seguidor of seguidores">{{ seguidor.nombre_completo }}</li>
+      </ul>
+    </div>
+  
+    <!-- Cajón 2: Buscador de usuarios -->
+    <div class="panel-cajon">
+      <h3>Buscar Usuarios</h3>
+      <input type="text" [(ngModel)]="busqueda" (input)="buscarUsuarios()" placeholder="Buscar por nombre o usuario" />
+      <ul>
+        <li *ngFor="let usuario of usuariosEncontrados">
+          {{ usuario.nombre_completo }} ({{ usuario.usuario }})
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Cajón 3: Mensajes enviados y botón de cerrar sesión -->
+    <div class="panel-cajon">
+      <h2>Estadísticas de usuarios</h2>
+      <p>Usuarios activos: {{ usuariosActivos }}</p>
+      <p>Mensajes enviados: {{ mensajesEnviados }}</p>
+      <p *ngIf="message">{{ message }}</p>
+      <button (click)="cerrarSesion()">Cerrar sesión</button>
+    </div>
+  </div>
+  

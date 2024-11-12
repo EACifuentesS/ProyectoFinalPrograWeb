@@ -1,0 +1,26 @@
+<div class="TMensaje">
+    <h2>Mis Mensajes</h2>
+    <p>{{ message }}</p>
+  
+    <!-- Campo de texto para escribir un mensaje -->
+    <textarea class="TMensaje" [(ngModel)]="mensaje.mensajes" placeholder="Escribe tu mensaje aquí"></textarea><br>
+    <button (click)="crearMensaje()">Enviar mensaje</button>
+  
+    <hr>
+  
+    <!-- Mostrar mensajes del usuario -->
+    <h2>Mis Mensajes</h2>
+    <ul>
+        <li *ngFor="let mensaje of misMensajes">
+            {{ mensaje.mensajes }} - {{ mensaje.fechamensaje }}
+        </li>
+    </ul>
+
+    <h2>Mensajes de los usuarios que sigo</h2>
+    <ul>
+        <li *ngFor="let mensaje of mensajesSeguidos">
+            {{ mensaje.mensajes }} - {{ mensaje.fechamensaje }}
+        </li>
+    </ul>
+  </div>
+  
